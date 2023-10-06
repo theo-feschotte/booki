@@ -1,27 +1,87 @@
-/****** General ***********/
-* {
-    font-family: 'Raleway', sans-serif;
-}
-
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
 
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    min-width: 1025px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/****** Nav / Site menu ***********/
+.site-menu {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    background-color: #FFFFFF;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.site-menu__logo {
+    width: 60px;
+    height: auto;
+    padding: 30px 50px;
+}
+.site-menu__logo-image {
+    width: 100%;
+    height: auto;
+}
+.site-menu__menu {
+    margin: 0;
+    padding: 0 50px;
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+    list-style: none;
+}
+.site-menu__menu-item {
+    padding-top: 16px;
+    border: none;
+    border-top: solid 2px transparent;
+}
+.site-menu__menu-link {
+    color: #000000;
+}
+.site-menu__menu-item:hover,
+.site-menu__menu-item--active {
+    border-top: solid 2px var(--main-color);
+}
+.site-menu__menu-item:hover .site-menu__menu-link,
+.site-menu__menu-item--active .site-menu__menu-link {
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
 .fa-solid {
     color: var(--main-color);
 }
 
-body {
-    display: flex;
-    justify-content: center;
-}
-
 .main-container {
     width: 100%;
+    min-width: 1025px;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -36,7 +96,7 @@ a {
 }
 
 .card {
-    background-color: white;
+    background-color: #FFFFFF;
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -119,49 +179,4 @@ a {
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
-}
-
-
-
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-    .hebergements-and-populaires {
-        flex-direction: column;
-    }
-
-    .hebergements {
-        width: 100%;
-    }
-
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .populaires-cards a {
-        width: 30%;
-    }
-
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
-}
-
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
 }
