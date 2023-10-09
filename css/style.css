@@ -66,7 +66,6 @@ a {
 
 .wrapper {
     width: 100%;
-    min-width: 1025px;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -202,7 +201,6 @@ a {
     gap: 35px;
     background-color: var(--white);
 }
-/* .site-header .wrapper {} */
 .site-header__subtitle {
     margin-top: 8px;
 }
@@ -336,23 +334,26 @@ a {
 }
 .section-accommodations {
     width: 100%;
-    min-width: calc(100% / 2);
     max-width: calc((100% / 3) * 2);
-    height: fit-content;
+    height: auto;
     padding: 30px;
     border-radius: 15px;
     background-color: var(--main-bg-color);
 }
 .section-accommodations__list {
     width: 100%;
-    height: fit-content;
     flex-wrap: wrap;
 }
 .section-accommodations__list-item {
-    width: calc((100% - 60px) / 3);
-    height: auto;
+    flex: 1 1 calc((100% - 30px) / 2);
     box-sizing: border-box;
     border: solid 5px var(--white);
+    background-color: var(--white);
+}
+@media screen and (min-width:1201px) {
+    .section-accommodations__list-item {
+        flex-basis: calc((100% - 60px) / 3);
+    }
 }
 .section-accommodations__list-link {
     display: flex;
@@ -363,6 +364,7 @@ a {
     height: 114px;
 }
 .section-accommodations__list-texts {
+    height: calc(100% - 134px);
     padding: 10px;
 }
 .section-accommodations__list-texts-description {
@@ -390,7 +392,6 @@ a {
 
 /****** Section accommodations most popular ***********/
 .section-accommodations--most-popular {
-    width: 100%;
     min-width: 430px;
     max-width: 430px;
     box-sizing: border-box;
@@ -403,7 +404,7 @@ a {
     color: var(--main-color);
 }
 .section-accommodations--most-popular .section-accommodations__list-item {
-    width: 100%;
+    flex: 1 1 100%;
     height: 146px;
 }
 .section-accommodations--most-popular .section-accommodations__list-link {
@@ -416,6 +417,8 @@ a {
     height: 100%;
 }
 .section-accommodations--most-popular .section-accommodations__list-texts {
+    width: 100%;
+    height: calc(100% - 20px);
     padding: 10px 15px;
     position: relative;
 }

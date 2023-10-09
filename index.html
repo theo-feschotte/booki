@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="/css/style.css">
     </head>
 
@@ -17,7 +17,7 @@
         <nav class="site-menu">
             <div class="wrapper">
                 <a class="site-menu__logo" href="#" target="_self">
-                    <img class="site-menu__logo-image" src="/images/logo/logo-booki.png" alt="Logo de Booki">
+                    <img class="site-menu__logo-image" src="/images/logo/logo-booki.svg" alt="Logo de Booki">
                 </a>
                 <ul class="site-menu__menu">
                     <li class="site-menu__menu-item site-menu__menu-item--active">
@@ -36,10 +36,10 @@
                 <p class="site-header__subtitle subtitle">En plein centre-ville ou en pleine nature</p>
             </div>
             <div class="wrapper">
-                <form class="site-header__form" id="form-reservation-location" action="" method="get">
+                <form class="site-header__form" id="form-reservation-location" method="get" action="">
                     <label class="site-header__form-label text-label" for="reservation-location"><i class="site-header__form-label-icon fa-solid fa-location-dot"></i><span class="site-header__form-label-text"> Entrez une destination</span></label>
-                    <input class="site-header__form-input text-input" id="reservation-location" type="text" name="reservation-location" placeholder="Marseille, France" required/>
-                    <input class="site-header__form-submit text-submit-button" type="submit" value="Rechercher"/>
+                    <input class="site-header__form-input text-input" id="reservation-location" type="text" name="reservation-location" placeholder="Marseille, France" required>
+                    <input class="site-header__form-submit text-submit-button" type="submit" value="Rechercher">
                 </form>
             </div>
             <div class="wrapper">
@@ -67,8 +67,8 @@
         <main class="site-main-content">
             <div class="wrapper">
 
-                <section id="section-accommodations" class="accommodations-container">
-                    <section class="section-accommodations">
+                <div class="accommodations-container">
+                    <section id="section-accommodations" class="section-accommodations">
                         <h2 class="section-accommodations__title">Hébergements à Marseille</h2>
                         <ul class="section-accommodations__list">
                             <li class="section-accommodations__list-item">
@@ -250,7 +250,7 @@
                             </li>
                         </ul>
                     </section>
-                </section>
+                </div>
 
                 <section id="section-activities" class="section-activities">
                     <h2 class="section-activities__title">Activités à Marseille</h2>
